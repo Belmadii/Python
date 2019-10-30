@@ -1,0 +1,37 @@
+ # En un casino de juegos se desea mostrar los mensajes respectivos por el puntaje obtenido en el lanzamiento de tres
+ # dados de un cliente, de acuerdo a los siguientes resultados:
+# • Si los tres dados son seis, mostrar el mensaje “Excelente”
+# • Si dos dados son seis, mostrar el mensaje “Muy bien”
+# • Si un dado es seis, mostrar el mensaje “Regular”
+# • Si ningún dado se obtiene seis, mostrar el mensaje “Insuficient
+
+
+import random as R
+
+def main ():
+    cont= 0
+    cartel = ""
+    t1 = R.randint (1,6)
+    if t1 == 6:
+        cont = cont +1
+    t2 = R.randint (1,6)
+    if t2 == 6:
+        cont = cont +1
+    t3 = R.randint (1,6)
+    if t3 == 6:
+        cont = cont +1
+    if cont == 1:
+        cartel = cartel + "Regular "
+        
+    if cont == 2:
+        cartel = cartel + "Muy bien "
+    
+    if cont == 3:
+        cartel = cartel + "Excelente "
+    
+    if cont == 0:
+        cartel = cartel + "Insuficiente "
+    
+    print(t1, t2, t3, cartel)
+
+main()
